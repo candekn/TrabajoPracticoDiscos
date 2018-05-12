@@ -17,9 +17,14 @@ public class Disco {
 	public Double perimetroExterior(){
 		return (2*Math.PI*this.radioExterior);
 	}
+	public Double superficieExterior(){
+		return (Math.PI*(Math.pow(radioExterior, 2)));
+	}
+	public Double superficieInterior(){
+		return (Math.PI*(Math.pow(radioInterior, 2)));
+	}
 	public Double superficie(){
-		Double radio=this.radioExterior+this.radioInterior;
-		return (Math.PI*(Math.pow(radio, 2)));
+		return (superficieExterior()-superficieInterior());
 	}
 	//Getters y Setters
 	public void setRadioInterior(Double radioInterior){
